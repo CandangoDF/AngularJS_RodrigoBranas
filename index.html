@@ -1,0 +1,21 @@
+<html ng-app="helloWorld">
+
+<head>
+    <title>Olá Mundo!</title>
+    <script src="angular/angular.js"></script>
+    <script>
+        angular.module("helloWorld", []); //cria o modulo e o colchete é para a injeção/importação de novos módulos, componentes, etc..
+        //localiza o módulo
+        angular.module("helloWorld").controller("helloWorldCtrl", function($scope) {
+            $scope.message = "Esbagaçando a porra do AngularJS!";
+        });
+        
+    </script>
+</head>
+<body>
+    <div ng-controller="helloWorldCtrl">
+        {{message}}
+    </div>
+
+</body>
+</html>
